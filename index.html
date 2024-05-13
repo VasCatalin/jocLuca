@@ -77,12 +77,12 @@
         <div
           class="color"
           v-for="color in colors"
-          :style="{background: `${color}`}"
+          :style="{background: `${color}`, display: this.numberNeeded === this.number ? 'flex' : 'none' }"
           @click="getColor(color)"
         ></div>
       </div>
     </div>
-    <div class="numbers">
+    <div class="numbers" :style="{display: this.numberNeeded !== this.number ? 'flex' : 'none' }">
       <h1
         v-for="i in 9"
         @click="getNumber(i)"
