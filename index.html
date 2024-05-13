@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>veRde</title>
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://kit-pro.fontawesome.com/releases/v6.3.0/css/pro.min.css"
+  >
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap"
+    rel="stylesheet"
+  >
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+  <div
+    id="app"
+    class="container-box flex justify-around items-center"
+  >
+
+
+    <div class="middle">
+      <div class="left">
+        <h3 :style="{color: `${this.colorNeeded}`}">{{this.numberNeeded}}</h3>
+      </div>
+
+      <div class="number">
+        <h2 :style="{color: `${this.color}`}">{{this.number}}</h2>
+      </div>
+
+      <div class="colors">
+        <div
+          class="color"
+          v-for="color in colors"
+          :style="{background: `${color}`}"
+          @click="getColor(color)"
+        ></div>
+      </div>
+    </div>
+    <div class="numbers">
+      <h1
+        v-for="i in 9"
+        @click="getNumber(i)"
+      >{{i}}</h1>
+    </div>
+
+  </div>
+
+  <script src="
+      app.js">
+      </script>
+</body>
+
+</html>
