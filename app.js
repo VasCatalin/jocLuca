@@ -70,7 +70,7 @@ const app = Vue.createApp({
           if (this.count === 3) {
             clearInterval(this.intervalId);
             this.number = null;
-            this.color = null;
+            this.color = 'black';
             this.numberNeeded = this.generateRandomNumber().number;
             this.colorNeeded = this.generateRandomNumber().color;
             this.count = 0;
